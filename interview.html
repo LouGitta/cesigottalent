@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CESI's Got Talent - August 30, 2024</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fff8e1;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #ffc107;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .blacka {
+            color: #000000;
+        }
+
+        header {
+            background-color: #ffeb3b;
+            color: #333;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            padding-left: 33%;
+            font-size: 2.5em;
+            letter-spacing: 1px;
+        }
+
+        .sections-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px auto;
+            max-width: 95%;
+            padding: 0 20px;
+        }
+
+        .section {
+            flex-basis: 30%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #fffde7;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+        }
+
+        .middle-section {
+            flex-basis: 40%;
+        }
+
+        h2 {
+            color: #ffeb3b;
+            font-size: 1.75em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ffc107;
+            padding-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        ul li strong {
+            font-weight: 600;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .photo-item {
+            background-color: #fff9c4;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .photo-item h3 {
+            margin-top: 10px;
+            font-size: 1em;
+            color: #333;
+        }
+
+        .photo-item:hover {
+            transform: translateY(-5px);
+        }
+
+        footer {
+            background-color: #ffc107;
+            color: #333;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+            width: 100%;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .popup-content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 400px;
+            width: 90%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .close-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #ffc107;
+            color: #333;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .close-btn:hover {
+            background: #ffb300;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1> <img src='\static/cesi-talent-removebg-preview.png' width="15%" height="2%" padding="-2%"> CESI's Got Talent</h1>
+    </header>
+
+    <div class="section middle-section">
+        <div class="content" onclick="openPopup()">
+            <h2>Find interviews here</h2>
+            <p>
+                All interviews are the same as when they were given to us.
+            </p>
+
+            <h2>Interview Abdellah and Ziyad</h2>
+            <p>
+                <strong>So, you are Abdel & Ziad, and you are footballers ! <br>
+                Since how many years do you are interested in football ?</strong><br><br>
+                Abdellah’s Answer : It’s from my childhood, I started to see the older in my neighborhood play football. I see them and I just loved so I tried, first in the street, after in a club. So, I stared at 10 years old. <br><br>
+                Ziyad’s Answer : For me it’s just like Abdellah, I’m stared to play in the street, so I was playing with my friend or my brothers when I was maybe 8 years old. I played in a football club when I was 11. <br><br>
+                <strong>Ok so you are 25 & 20 years old ! This passion began early in your life !
+                Did you have idols in this sport when you were little ?</strong><br><br>
+                Abdellah’s Answer : When I was little, I loved you know the show in football, so I liked players like Ronaldinho & Christiano Ronaldo. It was just for the show, now I prefer middle fielder  who create the game.<br><br>
+                Ziyad’s Answer : When I was young, I liked players like Ronaldo or Neymar for the content they proposed.<br><br>
+                <strong>Nice, famous one ! Is it always the same idols or does it change for now ?</strong><br><br>
+                Abdellah’s Answer : My idols changed because like I said first It was for the show, you know like Ronaldinho did a lot of strikes for It was for that. Now I prefer middle header because without them you can’t win, so for now I prefer players like Kroose or Inesta but yeah now I’m gonna to say players like Modric<br><br>
+                Ziyad ’s Answer : I don’t watch anymore football like before, but my favorite player now it’s Lionel Messi. For me it’s the best player. <br><br>
+                <strong>Perfect !<br><br>
+                How did you become so good at this sport ? Were you coached by somebody ?</strong><br><br>
+                Abdellah’s Answer : I don’t know if I’m good but I’m gonna to say I’m “bon” ! But first of all, I was bad, very bad, I started in the last team in the club. I’m remember that the first years in watched a lot of YouTube videos and try to do the same things that I saw all days I started to jungle and after to shoot you know when you play in the street you play a lot and after month you just be better. With time of training, you learned a lot. Also, I was coached by an older in my neighborhood, his name is Thomas. He trained me a lot and gave me advice.<br><br>
+                Ziyad ’s Answer : For me I became better, because I’m not the best player but I think I became better with myself or with coach like Abdellah or friends. Also, a thing that help me a lot is to play hard but with no competition, with no pression, like practice with friends after school.<br><br>
+                <strong>Can you show me some tricks ?</strong><br><br>
+                <img src='static/foot.png' width='30%' height='15%'><br>
+                <strong>Ok thanks a lot for your time ! How do you fell the show, are you ready for it ?</strong><br><br>
+                Common’s Answer : We are not ready yet but we gonna train and yeah, no pression !<br><br>
+                <strong>Nice to hear that ! I can't wait to see you on stage! Good Luck !</strong><br><br>
+            </p>
+
+            <h2>Interview Stéphane and Felix</h2>
+            <p>
+                <strong>What are you going to do today?</strong><br><br>
+
+                Stephan : We are going to play some music !<br><br>
+                Felix : YEAH ! We came from very far to play our song !<br><br>
+
+                <strong>Okay, but, what are you going to play?</strong><br><br>
+
+                Felix: We meet in a bar after 5 bottle of Whisky. I still don’t even know his name!<br><br>
+                Stephan : Yeah man, it was in Texas in USA you know ? <br><br>
+
+                <strong>So you not going to answer my question right ?</strong><br><br>
+
+                Stephan : Magalie was cute for sure! But I think I still prefer Karen.<br><br>
+                Felix : Are you serious bro? Magalie is the most beautiful for sure.<br><br>
+
+                <strong>Alright, I think I'll just wish you good luck with your show.</strong><br><br>
+
+                Stephan : Oh ? The interview is already end ?<br><br>
+                Felix : Okay thank’s dude ! Have a good day too, and don’t forget to drink your daily beer !<br><br>
+            </p>
+            <h2>Interview Gabin</h2>
+            <p>
+                <strong>What is your role on stage?</strong><br><br>
+
+                Gabin: I’m an MC, so I’m hosting the event and I present all the talent in my group.<br><br>
+
+                <strong>Which type of MC are you?</strong><br><br>
+
+                Gabin: I'm just going to create a great atmosphere for the whole audience. I hope everyone will love the talents and the show!<br><br>
+
+                <strong>Okay! You look on fire for the show!</strong><br><br>
+
+                Gabin: Yes sir, I am! Can’t wait to get on it!<br><br>
+
+                <strong>Perfect! Thanks for your time, have a good show!</strong><br><br>
+            </p>
+            <h2>Interview Amélie</h2>
+            <p>
+                <strong>Hi Amélie, the photographer of the show !  How old are you and since how many years do you are passion by photography ?</strong><br><br>
+                Amélie’s answer : It started in my life at 10 years old, now I am 32. It has been my passion for 22 years already! I have been practicing it professionally for 7 years.<br><br>
+                <strong>Oh, waw, you’re an O.G. ! But it’s an expensive hobby, how much your think is your collection ?</strong><br><br>
+                Amélie’s answer : My current collection must be valued at 3,500€ ! I spent quite a bit of time on it.<br><br>
+                <strong>Okey that a lot ! 2 French SMIC…<br>
+                So, for this event, how many persons you have photographed ?</strong><br><br>
+                Amélie’s answer : I photographed ~10 people and took ~60 photos! It took me a whole morning! I'm so happy to be able to show this at the event!<br><br>
+                <strong>Yes I can't wait to see that !</strong><br><br>
+            </p>
+        </div>
+    </div>
+    
+    <footer>
+            <img src="https://static.vecteezy.com/system/resources/previews/034/800/659/non_2x/x-new-twitter-logo-free-png.png" width="20" height="20">
+            <a class='blacka' href="https://x.com/cesigottalent44" target="_blank">Follow us on Twitter</a>
+            <br>
+            <img src="https://www.internetmatters.org/wp-content/uploads/2020/01/instagradientlogo-no-background.png" width="30" height="20">
+            <a class='blacka' href="https://www.instagram.com/cesigottalent44/" target="_blank">Follow us on Instagram</a>
+        <p>&copy; 2024 CESI's Got Talent | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        function openPopup() {
+            document.getElementById("popup").style.display = "flex";
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }

@@ -4,101 +4,299 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CESI's Got Talenbt - August 30, 2024</title>
+    <title>CESI's Got Talent - August 30, 2024</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f7f7f7;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fff8e1;
             color: #333;
             margin: 0;
             padding: 0;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #ffc107;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .blacka {
+            color: #000000;
         }
 
         header {
-            background-color: #f0f005;
-            color: black;
+            background-color: #ffeb3b;
+            color: #333;
             padding: 20px;
-            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         header h1 {
             margin: 0;
-            font-size: 3em;
+            padding-left: 33%;
+            font-size: 2.5em;
+            letter-spacing: 1px;
         }
 
-        section {
-            padding: 20px;
+        .sections-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px auto;
+            max-width: 95%;
+            padding: 0 20px;
         }
 
-        .content {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: #fff;
+        .section {
+            flex-basis: 30%;
             padding: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+            background-color: #fffde7;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+        }
+
+        .middle-section {
+            flex-basis: 40%;
         }
 
         h2 {
-            color: #dcdc04;
+            color: #ffeb3b;
+            font-size: 1.75em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ffc107;
+            padding-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        ul li strong {
+            font-weight: 600;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .photo-item {
+            background-color: #fff9c4;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .photo-item h3 {
+            margin-top: 10px;
+            font-size: 1em;
+            color: #333;
+        }
+
+        .photo-item:hover {
+            transform: translateY(-5px);
         }
 
         footer {
-            background-color: #333;
-            color: white;
+            background-color: #ffc107;
+            color: #333;
             text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
+            padding: 15px 0;
+            margin-top: 40px;
             width: 100%;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        footer p {
-            margin: 0;
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .popup-content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 400px;
+            width: 90%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .close-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #ffc107;
+            color: #333;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .close-btn:hover {
+            background: #ffb300;
         }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>CESI's Got Talent</h1>
+        <h1> <img src='\static/cesi-talent-removebg-preview.png' width="15%" height="2%" padding="-2%"> CESI's Got Talent</h1>
     </header>
 
-    <section>
-        <div class="content">
-            <h2>Join Us for a Night of Magic and Wonder!</h2>
-            <p>
-                The Grand Circus invites you to a night full of incredible performances, daring acrobatics, and spectacular
-                displays of skill! Mark your calendars for <strong>August 30, 2024</strong> and prepare to be amazed by our
-                world-class performers.
-            </p>
-
-            <h2>Event Details:</h2>
-            <ul>
-                <li><strong>Date:</strong> August 30, 2024</li>
-                <li><strong>Time:</strong> 7:00 PM</li>
-                <li><strong>Location:</strong> The Big Top, Main City Park</li>
-                <li><strong>Tickets:</strong> Available online and at the gate</li>
-            </ul>
-
-            <h2>Highlights of the Show:</h2>
-            <ul>
-                <li>Death-defying trapeze acts</li>
-                <li>Astonishing fire breathers</li>
-                <li>Hilarious clown performances</li>
-                <li>Mesmerizing magic tricks</li>
-                <li>Live music and dance</li>
-            </ul>
-
-            <p>
-                Don’t miss out on the most exciting event of the year! Bring your friends and family for an unforgettable
-                experience.
-            </p>
+    <div id="popup" class="popup-overlay">
+        <div class="popup-content">
+            <button class="close-btn" onclick="closePopup()">Close</button>
+            <h2>Event Reminder</h2>
+            <p>Don't forget to mark your calendar for August 30, 2024. Join us at CESI for an amazing experience!</p>
         </div>
-    </section>
+    </div>
 
+    <div class="sections-container">
+        <div class="section left-section">
+            <h2>Performers</h2>
+            <div class="photo-grid">
+                <div class="photo-item">
+                    <img src="static/IMG_1.jpeg" alt="Performer 1" width="150px" height="150px">
+                    <h3>Stéphane</h3>
+                </div>
+                <div class="photo-item">
+                    <img src="static/IMG_8.jpeg" alt="Performer 8">
+                    <h3>Felix</h3>
+                </div>
+                <div class="photo-item">
+                    <img src="static/IMG_2.jpeg" alt="Performer 2" width="150px" height="150px">
+                    <h3>Abdellah</h3>
+                </div>
+                <div class="photo-item">
+                    <img src="static/IMG_6.jpeg" alt="Performer 6">
+                    <h3>Ziyad</h3>
+                </div>
+                <div class="photo-item">
+                    <img src="static/IMG_4.jpeg" alt="Performer 4" width="150px" height="150px">
+                    <h3>Mathéo</h3>
+                </div>
+                <div class="photo-item">
+                    <img src="static/IMG_7.jpeg" alt="Performer 7">
+                    <h3>Arthur</h3>
+                </div>
+                <div class="photo-item">
+                    <img src="static/IMG_5.jpeg" alt="Performer 5">
+                    <h3>Chloé</h3>
+                </div>
+                <div class="photo-item">
+                    <img src="static/IMG_3.jpeg" alt="Performer 3" width="150px" height="150px">
+                    <h3>Elwann</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="section middle-section">
+            <div class="content" onclick="openPopup()">
+                <h2>Join Us for a Morning of Magic and Wonder!</h2>
+                <p>
+                    The Grand Circus invites you to a night full of incredible performances, daring acrobatics, and spectacular
+                    displays of skill! Mark your calendars for <strong>August 30, 2024</strong> and prepare to be amazed by our
+                    world-class performers.
+                </p>
+
+                <h2>Event Details:</h2>
+                <ul>
+                    <li><strong>Date:</strong> August 30, 2024</li>
+                    <li><strong>Time:</strong> 9:00 AM</li>
+                    <li><strong>Location:</strong> CESI, CARQUEFOU</li>
+                </ul>
+                <p>
+                    Don’t miss out on the most exciting event of the year! Bring your friends and family for an unforgettable
+                    experience.
+                </p>
+            </div>
+            <div class="content">
+                <h2>Interviews</h2>
+                <p>
+                    Want to learn about <strong>the performers</strong>?<br>
+                    We have some interviews with them for you. Click down below!
+                    <br> <a href="interview.html"><strong>Interviews</strong></a>
+                </p>
+            </div>
+        </div>
+
+        <div class="section right-section">
+            <h2>Planning</h2>
+                <p>
+                    <strong>Start : 9H00</strong><br>
+                    <br>
+                    <strong>1rst Performance :</strong> <br>
+                    Chloé, Stéphane and Mathéo<br>
+                </p>
+                <p>
+                    <strong>2nd Performance :</strong><br>
+                    Arthur<br>
+                </p>
+                <p>
+                    <strong>3rd Performance :</strong><br>
+                    Stéphane and Félix<br>
+                </p>
+                <p>
+                    <strong>4th Performance :</strong><br>
+                    Elwann<br>
+                </p>
+                
+            </div>
+        </div>
+    </div>
     <footer>
+            <img src="https://static.vecteezy.com/system/resources/previews/034/800/659/non_2x/x-new-twitter-logo-free-png.png" width="20" height="20">
+            <a class='blacka' href="https://x.com/cesigottalent44" target="_blank">Follow us on Twitter</a>
+            <br>
+            <img src="https://www.internetmatters.org/wp-content/uploads/2020/01/instagradientlogo-no-background.png" width="30" height="20">
+            <a class='blacka' href="https://www.instagram.com/cesigottalent44/" target="_blank">Follow us on Instagram</a>
         <p>&copy; 2024 CESI's Got Talent | All Rights Reserved</p>
     </footer>
-</body>
 
-</html>
+    <script>
+        function openPopup() {
+            document.getElementById("popup").style.display = "flex";
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
